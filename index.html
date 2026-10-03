@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amor Amarillo | Perfumes, maquillaje, moda y accesorios</title>
+<meta name="description" content="Perfumes, maquillaje, accesorios de pelo, acero dorado y blanco, ropa casual y deportiva. Pocito, San Juan. Envíos a todo el país.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rosa:#F3DCDD; --rosa-fuerte:#E3B5B9; --crema:#FFFAF7;
+  --dorado:#B8914F; --chocolate:#3E2523; --bordo:#7B2D3B;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--chocolate);background:var(--crema);line-height:1.6;font-size:17px}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--bordo);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* Cabecera */
+header{border-bottom:1px solid var(--rosa)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+header svg{width:64px;height:64px}
+nav{display:flex;gap:28px;font-weight:400;font-size:15px}
+nav a:hover{color:var(--bordo)}
+@media(max-width:620px){nav a:nth-child(n+3){display:none}}
+
+/* Portada */
+.hero{background:var(--rosa);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:64px;padding-bottom:64px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,6vw,68px);line-height:1.05;color:var(--chocolate);max-width:12ch}
+.hero p{margin:20px 0 32px;max-width:40ch;font-size:18px}
+.btn{display:inline-block;background:var(--bordo);color:var(--crema);padding:14px 30px;border-radius:999px;font-weight:400;transition:background .2s}
+.btn:hover{background:var(--chocolate)}
+.btn.suave{background:transparent;color:var(--bordo);border:1px solid var(--bordo);margin-left:10px}
+.btn.suave:hover{background:var(--bordo);color:var(--crema)}
+.hero .logo-grande{justify-self:center;width:min(100%,360px);filter:drop-shadow(0 18px 30px rgba(123,45,59,.18))}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-top:40px;padding-bottom:48px}.hero .logo-grande{order:-1;width:220px}}
+
+/* Categorías */
+section{padding:72px 0}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.15;margin-bottom:8px}
+.sub{max-width:52ch;margin-bottom:36px}
+.cats a{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 8px;border-top:1px solid var(--rosa-fuerte);transition:background .2s,padding .2s}
+.cats a:last-child{border-bottom:1px solid var(--rosa-fuerte)}
+.cats a:hover{background:var(--rosa);padding-left:20px}
+.cats strong{font-family:var(--serif);font-weight:500;font-size:28px}
+.cats span{font-size:15px;text-align:right;max-width:34ch}
+@media(max-width:620px){.cats a{flex-direction:column;gap:2px}.cats span{text-align:left}}
+
+/* Productos */
+.productos{background:#fff}
+.filtros{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.filtros button{font:inherit;font-weight:400;font-size:15px;color:var(--bordo);background:transparent;border:1px solid var(--rosa-fuerte);padding:8px 20px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+.filtros button:hover{background:var(--rosa)}
+.filtros button[aria-pressed="true"]{background:var(--bordo);color:var(--crema);border-color:var(--bordo)}
+.grilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:28px 22px}
+.prod[hidden]{display:none}
+.prod img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:120px 120px 6px 6px;background:var(--rosa)}
+.prod h3{font-weight:400;font-size:17px;margin-top:14px;line-height:1.35}
+.prod p{color:var(--bordo);font-weight:500}
+.pedir{display:inline-block;margin-top:10px;font-size:15px;font-weight:400;color:var(--bordo);border:1px solid var(--bordo);padding:7px 18px;border-radius:999px;transition:background .2s,color .2s}
+.pedir:hover{background:var(--bordo);color:var(--crema)}
+
+/* Envíos */
+.envios{background:var(--bordo);color:var(--crema);text-align:center}
+.envios h2{color:var(--crema)}
+.envios p{max-width:50ch;margin:0 auto 28px}
+.envios .btn{background:var(--crema);color:var(--bordo)}
+.envios .btn:hover{background:var(--rosa)}
+
+footer{padding:40px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center}
+footer a{border-bottom:1px solid var(--dorado)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- Logo reutilizable (SVG): se usa en la cabecera y en la portada -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 400 400">
+    <circle cx="200" cy="200" r="190" fill="#FFFAF7"/>
+    <circle cx="200" cy="200" r="178" fill="none" stroke="#B8914F" stroke-width="3"/>
+    <circle cx="200" cy="200" r="166" fill="none" stroke="#B8914F" stroke-width="1" stroke-dasharray="1 7" stroke-linecap="round"/>
+    <!-- ramita -->
+    <g fill="none" stroke="#B8914F" stroke-width="2.5" stroke-linecap="round">
+      <path d="M200 112 C200 96 200 86 200 76"/>
+      <path d="M200 100 C186 96 178 86 178 74 C192 76 200 86 200 100Z" fill="#B8914F" fill-opacity=".18"/>
+      <path d="M200 100 C214 96 222 86 222 74 C208 76 200 86 200 100Z" fill="#B8914F" fill-opacity=".18"/>
+      <path d="M200 88 C193 84 190 77 191 68 C198 70 201 78 200 88Z" fill="#B8914F" fill-opacity=".35"/>
+    </g>
+    <text x="200" y="206" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-weight="500" font-size="70" fill="#3E2523">Amor</text>
+    <text x="200" y="266" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-weight="500" font-size="70" fill="#7B2D3B">Amarillo</text>
+    <line x1="150" y1="292" x2="250" y2="292" stroke="#B8914F" stroke-width="1.5"/>
+    <text x="200" y="318" text-anchor="middle" font-family="'Jost',system-ui,sans-serif" font-weight="400" font-size="15" letter-spacing="1.5" fill="#3E2523">belleza, moda y accesorios</text>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a href="#inicio" aria-label="Amor Amarillo, inicio"><svg role="img" aria-label="Logo Amor Amarillo"><use href="#logo"/></svg></a>
+    <nav>
+      <a href="#categorias">Categorías</a>
+      <a href="#destacados">Productos</a>
+      <a href="#envios">Envíos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Lo lindo que te gusta, ahora también online</h1>
+        <p>Perfumes, maquillaje, accesorios de pelo, acero dorado y blanco, y ropa casual y deportiva. Desde Pocito, San Juan, para toda la Argentina.</p>
+        <a class="btn" href="#categorias">Ver productos</a>
+        <a class="btn suave" href="#envios">Cómo comprar</a>
+      </div>
+      <svg class="logo-grande" role="img" aria-label="Logo Amor Amarillo" viewBox="0 0 400 400"><use href="#logo"/></svg>
+    </div>
+  </div>
+
+  <section id="categorias">
+    <div class="wrap">
+      <h2>Qué vas a encontrar</h2>
+      <p class="sub">Elegí una categoría y mirá todo lo que tenemos.</p>
+      <div class="cats">
+        <a href="#"><strong>Perfumes</strong><span>Fragancias para todos los días y para ocasiones especiales</span></a>
+        <a href="#"><strong>Maquillaje</strong><span>Bases, labiales, sombras y todo para tu rutina</span></a>
+        <a href="#destacados" data-f="pelo"><strong>Accesorios de pelo</strong><span>Hebillas, scrunchies, cintas y broches</span></a>
+        <a href="#destacados" data-f="todo"><strong>Acero dorado y blanco</strong><span>Aros, collares, pulseras y anillos que no se oscurecen</span></a>
+        <a href="#"><strong>Ropa casual</strong><span>Prendas cómodas y lindas para el día a día</span></a>
+        <a href="#"><strong>Ropa deportiva</strong><span>Conjuntos, calzas y tops para moverte con estilo</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="destacados" class="productos">
+    <div class="wrap">
+      <h2>Joyas y accesorios</h2>
+      <p class="sub">Acero dorado y blanco, y broches de pelo. Los precios son de ejemplo.</p>
+      <div class="filtros" role="group" aria-label="Filtrar productos">
+        <button aria-pressed="true" data-f="todo">Todo</button>
+        <button aria-pressed="false" data-f="anillos">Anillos</button>
+        <button aria-pressed="false" data-f="aros">Aros</button>
+        <button aria-pressed="false" data-f="collares">Collares y pulseras</button>
+        <button aria-pressed="false" data-f="pelo">Accesorios de pelo</button>
+      </div>
+      <div class="grilla">
+        <article class="prod" data-cat="anillos"><img src="img/p01.webp" alt="Anillo baguette multicolor dorado" width="640" height="800" loading="lazy"><h3>Anillo baguette multicolor dorado</h3><p>$ 14.900</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Anillo%20baguette%20multicolor%20dorado" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="aros"><img src="img/p02.webp" alt="Aros flor rosa con perlitas" width="640" height="800" loading="lazy"><h3>Aros flor rosa con perlitas</h3><p>$ 9.800</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Aros%20flor%20rosa%20con%20perlitas" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="anillos"><img src="img/p03.webp" alt="Anillo corazones de colores" width="640" height="800" loading="lazy"><h3>Anillo corazones de colores</h3><p>$ 12.500</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Anillo%20corazones%20de%20colores" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="aros"><img src="img/p04.webp" alt="Aros argolla ancha dorados" width="640" height="800" loading="lazy"><h3>Aros argolla ancha dorados</h3><p>$ 11.200</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Aros%20argolla%20ancha%20dorados" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="anillos"><img src="img/p05.webp" alt="Anillo ajustable con circones de colores" width="640" height="800" loading="lazy"><h3>Anillo ajustable con circones de colores</h3><p>$ 10.400</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Anillo%20ajustable%20con%20circones%20de%20colores" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="anillos"><img src="img/p06.webp" alt="Anillo flor de circones" width="640" height="800" loading="lazy"><h3>Anillo flor de circones</h3><p>$ 13.700</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Anillo%20flor%20de%20circones" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="aros"><img src="img/p07.webp" alt="Aros argolla con mariposa rosa" width="640" height="800" loading="lazy"><h3>Aros argolla con mariposa rosa</h3><p>$ 12.900</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Aros%20argolla%20con%20mariposa%20rosa" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="anillos"><img src="img/p08.webp" alt="Anillo mariposa de circones" width="640" height="800" loading="lazy"><h3>Anillo mariposa de circones</h3><p>$ 15.800</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Anillo%20mariposa%20de%20circones" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="collares"><img src="img/p09.webp" alt="Collar corazón esmaltado rosa y blanco" width="640" height="800" loading="lazy"><h3>Collar corazón esmaltado rosa y blanco</h3><p>$ 13.300</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Collar%20coraz%C3%B3n%20esmaltado%20rosa%20y%20blanco" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="collares"><img src="img/p10.webp" alt="Pulsera trenzada con bolitas doradas" width="640" height="800" loading="lazy"><h3>Pulsera trenzada con bolitas doradas</h3><p>$ 16.500</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Pulsera%20trenzada%20con%20bolitas%20doradas" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="collares"><img src="img/p11.webp" alt="Pulsera eslabones con nácar y luna" width="640" height="800" loading="lazy"><h3>Pulsera eslabones con nácar y luna</h3><p>$ 17.900</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Pulsera%20eslabones%20con%20n%C3%A1car%20y%20luna" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="anillos"><img src="img/p12.webp" alt="Anillo flor multicolor grande" width="640" height="800" loading="lazy"><h3>Anillo flor multicolor grande</h3><p>$ 18.400</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Anillo%20flor%20multicolor%20grande" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="anillos"><img src="img/p13.webp" alt="Anillo bola con circones dorado" width="640" height="800" loading="lazy"><h3>Anillo bola con circones dorado</h3><p>$ 14.200</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Anillo%20bola%20con%20circones%20dorado" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="collares"><img src="img/p14.webp" alt="Collar guirnalda de circones" width="640" height="800" loading="lazy"><h3>Collar guirnalda de circones</h3><p>$ 15.600</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Collar%20guirnalda%20de%20circones" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="collares"><img src="img/p15.webp" alt="Collar largo con perlas y gotas" width="640" height="800" loading="lazy"><h3>Collar largo con perlas y gotas</h3><p>$ 19.800</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Collar%20largo%20con%20perlas%20y%20gotas" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="pelo"><img src="img/p16.webp" alt="Broche pinza flor azul humo" width="640" height="800" loading="lazy"><h3>Broche pinza flor azul humo</h3><p>$ 4.900</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Broche%20pinza%20flor%20azul%20humo" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="pelo"><img src="img/p17.webp" alt="Broche pinza flor bordó" width="640" height="800" loading="lazy"><h3>Broche pinza flor bordó</h3><p>$ 4.900</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Broche%20pinza%20flor%20bord%C3%B3" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="pelo"><img src="img/p18.webp" alt="Broche pinza flor chocolate" width="640" height="800" loading="lazy"><h3>Broche pinza flor chocolate</h3><p>$ 4.900</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Broche%20pinza%20flor%20chocolate" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+        <article class="prod" data-cat="pelo"><img src="img/p19.webp" alt="Broche pinza flor caramelo" width="640" height="800" loading="lazy"><h3>Broche pinza flor caramelo</h3><p>$ 4.900</p><a class="pedir" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20consultar%20por%3A%20Broche%20pinza%20flor%20caramelo" target="_blank" rel="noopener">Consultar por WhatsApp</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="envios" class="envios">
+    <div class="wrap">
+      <h2>Comprá desde donde estés</h2>
+      <p>Retirá en el local de Pocito o pedí tu envío a todo el país. Armamos tu pedido y te avisamos por WhatsApp.</p>
+      <a class="btn" href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Hacer mi pedido</a>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto">
+  <div class="wrap">
+    <span>Amor Amarillo · Pocito, San Juan, Argentina</span>
+    <span><a href="https://wa.me/5492644806420?text=%C2%A1Hola%20Amor%20Amarillo%21" target="_blank" rel="noopener">WhatsApp 264 480-6420</a> &nbsp; <a href="https://www.instagram.com/amor.amarillo0" target="_blank" rel="noopener">Instagram @amor.amarillo0</a></span>
+  </div>
+</footer>
+
+<script>
+const botones=document.querySelectorAll('.filtros button'),items=document.querySelectorAll('.prod');
+function filtrar(f){
+  botones.forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===f));
+  items.forEach(p=>p.hidden=!(f==='todo'||p.dataset.cat===f));
+}
+botones.forEach(b=>b.addEventListener('click',()=>filtrar(b.dataset.f)));
+document.querySelectorAll('.cats a[data-f]').forEach(a=>a.addEventListener('click',()=>filtrar(a.dataset.f)));
+</script>
+</body>
+</html>
